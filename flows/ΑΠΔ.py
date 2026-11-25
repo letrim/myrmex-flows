@@ -76,7 +76,9 @@ from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 
 from myrmex_agent.sdk import Param
 
-FLOW_VERSION = "5"        # cloud «ΑΠΔ»: 5 = Petros's runs 13–23/11 (Open period, pending ΑΠΔ, problem() messages,
+FLOW_VERSION = "6"        # cloud «ΑΠΔ»: 6 = «ΑΠΔ» / «ΑΠΔ ΤΕΚΑ»: the 1st row of however many the menu search lists
+                          # (Hyper 9 / 2, Epsilon Extra 1 — Φραντζής 25/11/2026: rows=9 picked nothing there);
+                          # 5 = Petros's runs 13–23/11 (Open period, pending ΑΠΔ, problem() messages,
                           # ΑΣΥΜΦΩΝΙΑ = problem, halt, retryable, delete_file, review.accept) merged with Lefteris's
                           # v4 (Hyper or Extra, no local paths in fail messages) — 24/11/2026;
                           # 4 (Lefteris) = Hyper or Extra (ExtraM.exe), fail_shot; 3 = the receipt also to the cloud
@@ -723,14 +725,15 @@ def contributions_pdf(f, afm, folder, year, month) -> dict:
 # ── phase 3: ΑΠΔ ΕΦΚΑ / ΤΕΚΑ (as fmy_python\ΑΠΔ.py step_apd) ───────────────
 
 APD = "TfAPD"
-# Menu search with the «logimate» user (reference PC 09/11/2026): «ΑΠΔ» 9 rows, 1st = Εκτυπώσεις ::
-# Ασφαλιστικές :: ΕΦΚΑ :: ΑΠΔ; «ΑΠΔ ΤΕΚΑ» 2 rows, 1st = ΤΕΚΑ :: ΑΠΔ ΤΕΚΑ. Another number of rows picks
-# nothing (navigate_menu rows=) → add it here. The title is checked after: «Α.Π.Δ.» is also a part of
-# the titles of the other ΑΠΔ windows, so those words must NOT be in it.
+# Menu search with the «logimate» user: the right one is ALWAYS the 1st row, whatever the count —
+# «ΑΠΔ»: Hyper 9 rows (1st = Εκτυπώσεις :: Ασφαλιστικές :: ΕΦΚΑ :: ΑΠΔ, 96 runs), Epsilon Extra 1 row
+# (Φραντζής 25/11/2026); «ΑΠΔ ΤΕΚΑ»: Hyper 2 rows, 1st = ΤΕΚΑ :: ΑΠΔ ΤΕΚΑ. So no rows= (Petros 25/11/2026:
+# «την 1η γραμμή απ' όσες βγουν»). The window is checked after: «Επιλογή Εταιριών», then the title —
+# «Α.Π.Δ.» is also a part of the titles of the other ΑΠΔ windows, so those words must NOT be in it.
 APD_KINDS = {
-    "ΕΦΚΑ": {"menu": "ΑΠΔ", "rows": (9,), "title": "Α.Π.Δ.", "prefix": "ΑΠΔ",
+    "ΕΦΚΑ": {"menu": "ΑΠΔ", "title": "Α.Π.Δ.", "prefix": "ΑΠΔ",
              "not": ("ΤΕΚΑ", "Δημοσ", "Οικοδομ", "Ναυτ")},
-    "ΤΕΚΑ": {"menu": "ΑΠΔ ΤΕΚΑ", "rows": (2,), "title": "Α.Π.Δ. ΤΕΚΑ", "prefix": "ΑΠΔ ΤΕΚΑ",
+    "ΤΕΚΑ": {"menu": "ΑΠΔ ΤΕΚΑ", "title": "Α.Π.Δ. ΤΕΚΑ", "prefix": "ΑΠΔ ΤΕΚΑ",
              "not": ("Οικοδομ",)},
 }
 # Bottom bar of «Α.Π.Δ.»: painted labels on the bottom TPanel (327,820)–(1592,853) on the reference PC:
@@ -861,11 +864,9 @@ def open_apd(f, kind):
             break
         if not f.window_exists("TfChooseCompanies", "Επιλογή Εταιριών"):
             f.connect_window(window_class="TfMain", window_title="Μισθοδοσία", timeout=60)
-            for rows in k["rows"]:
-                f.navigate_menu(k["menu"], select=1, rows=rows, on_error="continue")
-                if f.window_exists("TfChooseCompanies", "Επιλογή Εταιριών", timeout=30):
-                    f.log(f"«{k['menu']}»: γραμμή 1 από {rows}")
-                    break
+            f.navigate_menu(k["menu"], select=1, on_error="continue")     # the 1st row, any count
+            if f.window_exists("TfChooseCompanies", "Επιλογή Εταιριών", timeout=30):
+                f.log(f"«{k['menu']}»: 1η γραμμή")
         if f.window_exists("TfChooseCompanies", "Επιλογή Εταιριών"):
             f.connect_window(window_class="TfChooseCompanies", window_title="Επιλογή Εταιριών", timeout=5)
             f.click("Επιλογή", class_name="TBitBtn", click_method="message")
@@ -875,8 +876,8 @@ def open_apd(f, kind):
             f.wait(DELAY)
     else:
         shot = f.screenshot(store_as=f"apd_menu_shot_{kind}")
-        problem(f, f"δεν άνοιξε η «{k['title']}» από την αναζήτηση μενού «{k['menu']}» (γραμμές {list(k['rows'])}) — "
-                   f"πρόσθεσε τον αριθμό γραμμών στο APD_KINDS", shot=shot)
+        problem(f, f"δεν άνοιξε η «{k['title']}» από την αναζήτηση μενού «{k['menu']}» (1η γραμμή, {ATTEMPTS} "
+                   f"φορές)", shot=shot)
     wrong = [x for x in k["not"] if f.window_exists(APD, x)]
     if not f.window_exists(APD, k["title"]) or wrong:
         shot = f.screenshot(store_as=f"apd_wrong_shot_{kind}")
