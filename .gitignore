@@ -1,0 +1,10 @@
+myrmex.log
+logs/
+screenshots/
+*.sig
+*.flowkey
+clients.csv
+params.txt
+__pycache__/
+*.log
+*.py[cod]
