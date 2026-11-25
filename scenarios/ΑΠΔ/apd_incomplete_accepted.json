@@ -1,0 +1,559 @@
+{
+  "description": "«Ελλιπή στοιχεία» με review.accept=yes → OK με έγκριση χρήστη και συνέχεια",
+  "vars": {
+    "period.year": "2026",
+    "period.month": "10",
+    "client.afm": "123456789",
+    "client.name": "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+    "output.folder": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789",
+    "downloads.folder": "C:\\Users\\test\\Downloads",
+    "test": "yes",
+    "review.accept": "yes"
+  },
+  "windows": [
+    {
+      "class_name": "TuAPDCaseReview",
+      "results": [
+        true,
+        false
+      ]
+    },
+    {
+      "class_name": "TfMisthodotikiKatastasi",
+      "title": "Μισθοδοτική Κατάσταση",
+      "results": [
+        false,
+        true
+      ]
+    },
+    {
+      "class_name": "#32770",
+      "title": "Αποθήκευση",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfChooseCompanies",
+      "title": "Επιλογή Εταιριών",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfrxPreviewForm",
+      "results": [
+        false,
+        true
+      ]
+    },
+    {
+      "class_name": "TfrxPDFExportDialog",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "Α.Π.Δ. ΤΕΚΑ",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "Α.Π.Δ.",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "ΤΕΚΑ",
+      "results": [
+        false
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "Δημοσ",
+      "results": [
+        false
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "Οικοδομ",
+      "results": [
+        false
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "title": "Ναυτ",
+      "results": [
+        false
+      ]
+    },
+    {
+      "class_name": "TfAPD",
+      "results": [
+        false,
+        true
+      ]
+    }
+  ],
+  "store": {
+    "company_search": "123456789",
+    "select_all_runs_1": [
+      [
+        10,
+        60
+      ]
+    ],
+    "exported_file_1": {
+      "found": true,
+      "name": "export.xlsx",
+      "path": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789\\export.xlsx"
+    },
+    "payroll_rows_1": [
+      [
+        "Μισθοδοτική Κατάσταση"
+      ],
+      [
+        "Εταιρεία",
+        "Α.Φ.Μ.",
+        "Επώνυμο",
+        "Όνομα",
+        "Περίοδος",
+        "Σύν. Εισφ. Κύριου Ταμείου",
+        "Συν. Εισφ. Επίκ. Ταμείου"
+      ],
+      [
+        "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+        "111111111",
+        "ΕΡΓΑΖΟΜΕΝΟΣ",
+        "1",
+        "Οκτώβριος",
+        100.0,
+        10.0
+      ],
+      [
+        "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+        "222222222",
+        "ΕΡΓΑΖΟΜΕΝΟΣ",
+        "2",
+        "Οκτώβριος",
+        200.0,
+        20.0
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "Σύνολα",
+        300.0,
+        30.0
+      ]
+    ],
+    "date_1": "1/10/2026",
+    "date_2": "31/10/2026",
+    "print_bar_runs": [
+      [
+        10,
+        80
+      ],
+      [
+        100,
+        160
+      ],
+      [
+        180,
+        220
+      ]
+    ],
+    "screen": [
+      1920,
+      1080
+    ],
+    "contrib_pdf_saved": {
+      "found": true,
+      "name": "123456789_ΕΙΣΦΟΡΕΣ_2026_10.pdf",
+      "path": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789\\123456789_ΕΙΣΦΟΡΕΣ_2026_10.pdf"
+    },
+    "contrib_pdf_text": "Περίοδος: 1/10/2026 - 31/10/2026\nΑ.Φ.Μ. : 123456789\nΕργαζομένου Εργοδότη Επιδότηση Σύνολο\nΕΦΚΑ\nΣύνολο : 100,00 200,00 0,00 300,00\nTEKA\nΣύνολο : 10,00 20,00 0,00 30,00\nΓενικό Σύνολο",
+    "apd_combo_ΕΦΚΑ_1": "01 Κανονική",
+    "apd_combo_ΕΦΚΑ_2": "Οκτώβριος",
+    "apd_combo_ΕΦΚΑ_3": "Οκτώβριος",
+    "apd_year_ΕΦΚΑ_1": "2026",
+    "apd_year_ΕΦΚΑ_2": "2026",
+    "calc_bar_runs_ΕΦΚΑ": [
+      [
+        10,
+        90
+      ],
+      [
+        120,
+        170
+      ]
+    ],
+    "calc_done_ΕΦΚΑ": true,
+    "export_page_ΕΦΚΑ": true,
+    "apd_edit_ΕΦΚΑ_1": "C:\\Program Files (x86)\\epsilon net\\hmisthos\\",
+    "csl_ΕΦΚΑ": [
+      "1                    1020260000005000000022000000000003000026112026",
+      "2                    ΕΡΓΑΖΟΜΕΝΟΣ                                                111111111",
+      "3                                                025          0000100000                                                   00000010000      ",
+      "2                    ΕΡΓΑΖΟΜΕΝΟΣ                                                222222222",
+      "3                                                025          0000120000                                                   00000020000      ",
+      "EOF"
+    ],
+    "send_page_ΕΦΚΑ": [
+      {
+        "type": "Text",
+        "name": "Το αρχείο ανέβηκε επιτυχώς"
+      }
+    ],
+    "list_page_ΕΦΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000001"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΠΡΟΣ ΕΛΕΓΧΟ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Έλεγχος Υποβολής"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "83000000"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "9/2026 - 9/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΥΠΟΒΟΛΗ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Επανέκδοση Αποδεικτικού"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "row_page_ΕΦΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000001"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΠΡΟΣ ΕΛΕΓΧΟ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Έλεγχος Υποβολής"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "check_ok_page_ΕΦΚΑ": [
+      {
+        "type": "Button",
+        "name": "OK"
+      }
+    ],
+    "check_page_ΕΦΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000001"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΜΕ ΔΥΝΑΤΟΤΗΤΑ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Υποβολή"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "continue_page_ΕΦΚΑ": [
+      {
+        "type": "Edit",
+        "name": "Περίοδος Υποβολής",
+        "value": "10/2026"
+      },
+      {
+        "type": "Button",
+        "name": "Συνέχεια"
+      }
+    ],
+    "final_page_ΕΦΚΑ": [
+      {
+        "type": "Text",
+        "name": "Σύνολο Εισφορών"
+      },
+      {
+        "type": "Button",
+        "name": "Υποβολή & Έκδοση Αποδεικτικού"
+      }
+    ],
+    "receipt_ΕΦΚΑ": {
+      "found": true,
+      "name": "report_ΕΦΚΑ.pdf",
+      "path": "C:\\Users\\test\\Downloads\\report_ΕΦΚΑ.pdf"
+    },
+    "receipt_text_ΕΦΚΑ": "Αποδεικτικό Υποβολής ΑΠΔ\nΑριθμ. Υποβολής 84000001\nΑ.Φ.Μ. 123456789\nΠερίοδος Από 10/2026\nΚαταβλητέες Εισφορές 300,00\nΣύνολο Επιδοτήσεων 0,00",
+    "receipt_exists_ΕΦΚΑ": {
+      "found": false
+    },
+    "receipt_moved_ΕΦΚΑ": {
+      "found": true,
+      "name": "moved.pdf",
+      "path": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789\\moved.pdf"
+    },
+    "apd_combo_ΤΕΚΑ_1": "01 Κανονική",
+    "apd_combo_ΤΕΚΑ_2": "Οκτώβριος",
+    "apd_combo_ΤΕΚΑ_3": "Οκτώβριος",
+    "apd_year_ΤΕΚΑ_1": "2026",
+    "apd_year_ΤΕΚΑ_2": "2026",
+    "calc_bar_runs_ΤΕΚΑ": [
+      [
+        10,
+        90
+      ],
+      [
+        120,
+        170
+      ]
+    ],
+    "calc_done_ΤΕΚΑ": true,
+    "export_page_ΤΕΚΑ": true,
+    "apd_edit_ΤΕΚΑ_1": "C:\\Program Files (x86)\\epsilon net\\hmisthos\\",
+    "csl_ΤΕΚΑ": [
+      "1                    1020260000005000000022000000000000300026112026",
+      "2                    ΕΡΓΑΖΟΜΕΝΟΣ                                                111111111",
+      "3                                                025          0000100000                                                   00000001000      ",
+      "2                    ΕΡΓΑΖΟΜΕΝΟΣ                                                222222222",
+      "3                                                025          0000120000                                                   00000002000      ",
+      "EOF"
+    ],
+    "send_page_ΤΕΚΑ": [
+      {
+        "type": "Text",
+        "name": "Το αρχείο ανέβηκε επιτυχώς"
+      }
+    ],
+    "list_page_ΤΕΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000002"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΠΡΟΣ ΕΛΕΓΧΟ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Έλεγχος Υποβολής"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "83000000"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "9/2026 - 9/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΥΠΟΒΟΛΗ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Επανέκδοση Αποδεικτικού"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "row_page_ΤΕΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000002"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΠΡΟΣ ΕΛΕΓΧΟ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Έλεγχος Υποβολής"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "check_ok_page_ΤΕΚΑ": [
+      {
+        "type": "Button",
+        "name": "OK"
+      }
+    ],
+    "check_page_ΤΕΚΑ": [
+      {
+        "type": "Text",
+        "name": "Αριθμός"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "84000002"
+      },
+      {
+        "type": "Text",
+        "name": "01 ΚΑΝΟΝΙΚΗ"
+      },
+      {
+        "type": "Text",
+        "name": "10/2026 - 10/2026"
+      },
+      {
+        "type": "Text",
+        "name": "ΜΕ ΔΥΝΑΤΟΤΗΤΑ ΥΠΟΒΟΛΗΣ"
+      },
+      {
+        "type": "Hyperlink",
+        "name": "Υποβολή"
+      },
+      {
+        "type": "Text",
+        "name": "Περίοδος Υποβολής"
+      }
+    ],
+    "continue_page_ΤΕΚΑ": [
+      {
+        "type": "Edit",
+        "name": "Περίοδος Υποβολής",
+        "value": "10/2026"
+      },
+      {
+        "type": "Button",
+        "name": "Συνέχεια"
+      }
+    ],
+    "final_page_ΤΕΚΑ": [
+      {
+        "type": "Text",
+        "name": "Σύνολο Εισφορών"
+      },
+      {
+        "type": "Button",
+        "name": "Υποβολή & Έκδοση Αποδεικτικού"
+      }
+    ],
+    "receipt_ΤΕΚΑ": {
+      "found": true,
+      "name": "report_ΤΕΚΑ.pdf",
+      "path": "C:\\Users\\test\\Downloads\\report_ΤΕΚΑ.pdf"
+    },
+    "receipt_text_ΤΕΚΑ": "Αποδεικτικό Υποβολής ΑΠΔ ΤΕΚΑ\nΑριθμ. Υποβολής 84000002\nΑ.Φ.Μ. 123456789\nΠερίοδος Από 10/2026\nΚαταβλητέες Εισφορές 30,00\nΣύνολο Επιδοτήσεων 0,00",
+    "receipt_exists_ΤΕΚΑ": {
+      "found": false
+    },
+    "receipt_moved_ΤΕΚΑ": {
+      "found": true,
+      "name": "moved.pdf",
+      "path": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789\\moved.pdf"
+    },
+    "review_missing_ΕΦΚΑ": true,
+    "review_reason_ΕΦΚΑ": "Μηδενική μισθοδοσία λόγω λοχείας"
+  },
+  "expect": {
+    "status": "success",
+    "message_contains": "ΔΟΚΙΜΗ"
+  }
+}

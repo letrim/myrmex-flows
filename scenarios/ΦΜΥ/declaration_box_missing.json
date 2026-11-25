@@ -1,0 +1,125 @@
+{
+  "description": "fmy.total_pause=yes αλλά το κουτί δεν βρίσκεται → σταματά πριν τον υπολογισμό",
+  "vars": {
+    "period.year": "2026",
+    "period.month": "9",
+    "client.afm": "123456789",
+    "client.name": "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+    "output.folder": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789",
+    "fmy.total_pause": "yes"
+  },
+  "windows": [
+    {
+      "class_name": "TfMisthodotikiKatastasi",
+      "title": "Μισθοδοτική Κατάσταση",
+      "results": [
+        false,
+        true
+      ]
+    },
+    {
+      "class_name": "#32770",
+      "title": "Αποθήκευση",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "TfJL10Edit",
+      "title": "Αποθηκευμένα στοιχεία",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "#32770",
+      "title": "Πληροφορία",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "#32770",
+      "title": "Εκτύπωση",
+      "results": [
+        true
+      ]
+    },
+    {
+      "class_name": "#32770",
+      "title": "Αποθήκευση εξόδου εκτύπωσης ως",
+      "results": [
+        true
+      ]
+    }
+  ],
+  "store": {
+    "company_search": "123456789",
+    "select_all_runs": [
+      [
+        10,
+        60
+      ]
+    ],
+    "exported_file": {
+      "found": true,
+      "name": "export.xlsx",
+      "path": "C:\\Myrmex\\exports\\ΤΕΣΤ ΕΤΑΙΡΙΑ - 123456789\\export.xlsx"
+    },
+    "fmy_amount": "120,00",
+    "digital_signature": "0,00",
+    "payroll_rows": [
+      [
+        "Μισθοδοτική Κατάσταση"
+      ],
+      [
+        "Εταιρεία",
+        "Επώνυμο",
+        "ΑΦΜ",
+        "Συν.Αποδ.",
+        "Φ.Μ.Υ",
+        "Ψηφ.Τέλος",
+        "Έτος"
+      ],
+      [
+        "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+        "ΕΡΓΑΖΟΜΕΝΟΣ 1",
+        "111111111",
+        1000,
+        50.0,
+        0,
+        2026
+      ],
+      [
+        "ΤΕΣΤ ΕΤΑΙΡΙΑ",
+        "ΕΡΓΑΖΟΜΕΝΟΣ 2",
+        "222222222",
+        1200,
+        70.0,
+        0,
+        2026
+      ],
+      [
+        "",
+        "Σύνολα",
+        "",
+        2200,
+        120.0,
+        0,
+        ""
+      ]
+    ],
+    "jl10_lines": [
+      "0JL10                                                            ",
+      "1                                   123456789                                   ",
+      "2                                                                               ",
+      "3111111111                                              00000100000                               0000005000            ",
+      "3222222222                                              00000120000                               0000007000            "
+    ],
+    "jl10_option_fmy.total_pause": false
+  },
+  "expect": {
+    "status": "failed",
+    "message_contains": "Ολική παύση απασχόλησης προσωπικού"
+  }
+}
